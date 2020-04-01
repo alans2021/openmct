@@ -7,7 +7,6 @@
  * node app.js [options]
  */
 
-
 const options = require('minimist')(process.argv.slice(2));
 const express = require('express');
 const app = express();
@@ -66,10 +65,13 @@ app.use(require('webpack-hot-middleware')(
 
     }
 ));
-
+console.log("HERE")
 // Expose index.html for development users.
 app.get('/', function (req, res) {
+    console.log("res is " + res);
+    console.log("Before index.html")
     fs.createReadStream('index.html').pipe(res);
+    console.log("After index.html")
 });
 
 // Finally, open the HTTP server and log the instance to the console

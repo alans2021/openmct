@@ -55,7 +55,8 @@
         openmct.install(openmct.plugins.DisplayLayout({
             showAsView: ['summary-widget', 'example.imagery']
         }));
-        openmct.install(openmct.plugins.Conductor({
+        console.log("Inside index.html");
+        /*openmct.install(openmct.plugins.Conductor({
             menuOptions: [
                 {
                     name: "Fixed",
@@ -75,7 +76,7 @@
                     }
                 }
             ]
-        }));
+        }));*/
         openmct.install(openmct.plugins.SummaryWidget());
         openmct.install(openmct.plugins.Notebook());
         openmct.install(openmct.plugins.LADTable());
